@@ -12,12 +12,14 @@ import (
 )
 
 func main() {
+	fmt.Println("========= GO =========")
 	for d := 15726; d <= 25100; d += 200 {
 		for n := d; n < d+200; n++ {
 			_ = netbian.Crawler(n, fmt.Sprintf("/Users/rustle/Desktop/Pictures/netbian/%d.jpg", n))
-			fmt.Println("finished: ", n)
+			fmt.Println("DOWNLOAD: ", n)
 			time.Sleep(1 * time.Second)
 		}
 		time.Sleep(24 * time.Hour)
 	}
+	fmt.Println("========= OK =========")
 }
