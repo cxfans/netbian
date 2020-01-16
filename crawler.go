@@ -23,7 +23,8 @@ func Crawler(n int, p string) (err error) {
 	r.Header.Add("Accept-Encoding", "gzip,deflate")
 	r.Header.Add("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8")
 	r.Header.Add("Connection", "keep-alive")
-	r.Header.Add("Cookie", `__cfduid=d81d868a4a4db9f4c9694d5c87fba56451572079936; Hm_lvt_526caf4e20c21f06a4e9209712d6a20e=1572079938,1573694107; PHPSESSID=382bd45158099889cb355d81ebe2b302; zkhanmlusername=%B7%E7%D3%B0%C1%F7%BA%DB; zkhanmluserid=70198; zkhanmlgroupid=3; zkhanmlrnd=sivCMoVV6thLf4fyFbgM; zkhanmlauth=ad707eb248e83feb3adeae80c4661b41; Hm_lpvt_526caf4e20c21f06a4e9209712d6a20e=1573694140; security_session_verify=aeb90b678f3bac7ddff6d920973c763f`)
+	// 登录账号的 Cookie，一段时间后会过期
+	r.Header.Add("Cookie", `__cfduid=d81d868a4a4db9f4c9694d5c87fba56451572079936; Hm_lvt_526caf4e20c21f06a4e9209712d6a20e=1572079938,1573694107; PHPSESSID=j1sa1mabdubf9e7nfpeql4qgd6; zkhanmlusername=%B7%E7%D3%B0%C1%F7%BA%DB; zkhanmluserid=70198; zkhanmlgroupid=3; zkhanmlrnd=VxXXBkYpv7ny0oNtyrTZ; zkhanmlauth=baeec66259617759d548eb278acc69ad`)
 	r.Header.Add("DNT", "1")
 	r.Header.Add("Upgrade-Insecure-Requests", "1")
 	r.Header.Add("Host", "pic.netbian.com")
