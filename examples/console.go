@@ -9,6 +9,7 @@ import (
 	"github.com/cxfans/netbian"
 )
 
+// go build -o bin/console examples/console.go
 func main() {
 	num := flag.Int("n", 20000, "图片序号")
 	flag.Parse()
