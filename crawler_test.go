@@ -1,6 +1,9 @@
 package netbian
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 // go test -run TestCrawler
 func TestCrawler(t *testing.T) {
@@ -8,4 +11,13 @@ func TestCrawler(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
+}
+
+// go test -run TestLatest
+func TestLatest(t *testing.T) {
+	l, err := Latest()
+	if err != nil {
+		t.Error(err)
+	}
+	fmt.Println(l)
 }
