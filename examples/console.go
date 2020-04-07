@@ -1,7 +1,7 @@
 /*
-	彼岸图网（http://pic.netbian.com/）爬虫
-	命令行工具，根据图片序号下载到当前工作目录
+	通过命令行下载图片，根据编号下载图片到当前工作目录
 */
+
 package main
 
 import (
@@ -11,7 +11,7 @@ import (
 
 // go build -o bin/console examples/console.go
 func main() {
-	num := flag.Int("n", 20000, "图片序号")
+	num := flag.Int("n", 20000, "图片编号")
 	flag.Parse()
 	_ = netbian.Crawler(*num, "example.jpg")
 }
